@@ -4,7 +4,7 @@
      @list = List.new( list_params )
       
       if @list.save
-        render json: { success: "list sucessfully created" }, status: :created
+        render json: @list
       else
         render json: { failure: "invalid name" }, status: :unprocessable_entity
       end
