@@ -18,7 +18,6 @@ class Api::UsersController < ApiController
      begin
        user = User.find(params[:id])
        user.destroy
-# #1
        render json: {}, status: :no_content
      rescue ActiveRecord::RecordNotFound
        render :json => {}, :status => :not_found
